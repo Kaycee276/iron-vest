@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+@import "tailwindcss";
+
+:root {
+  /* Core Colors */
+  --color-bg-base: #000000;
+  --color-bg-surface: #0a0a0a;
+  --color-bg-surface-elevated: #15110d;
+
+  /* Typography Colors */
+  --color-text-primary: #d4d4d8;
+  --color-text-muted: #a1a1aa;
+  --color-text-accent: #8b4513;
+
+  /* Accent Colors */
+  --color-accent: #8b4513;
+  --color-accent-hover: #a0522d;
+
+  /* Box Model & Structural */
+  --border-radius-base: 0px;
+  --border-color: rgba(139, 69, 19, 0.25);
+}
+
+@layer base {
+  html,
+  body {
+    background-color: var(--color-bg-base);
+    color: var(--color-text-primary);
+    font-weight: 700;
+    font-family: "Orbitron", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom Dark Scrollbar to match the theme */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg-base);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1a1a1a;
+    border-radius: var(--border-radius-base);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent);
+  }
+}
+
+@layer components {
+  /* The core container/card block for the layout */
+  .iron-card {
+    background-color: var(--color-bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-base);
+    padding: 1.5rem;
+  }
+
+  /* Reusable button matching the midnight forge aesthetic */
+  .iron-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-accent);
+    color: var(--color-bg-base);
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  .iron-btn:hover {
+    background-color: var(--color-accent);
+    color: var(--color-bg-base);
+    box-shadow: 0 0 12px rgba(139, 69, 19, 0.4);
+  }
+}
+
+button {
+  cursor: pointer;
+}
