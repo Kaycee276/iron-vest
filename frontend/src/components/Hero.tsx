@@ -5,11 +5,14 @@ const Hero = () => {
         The <span className="text-[var(--color-accent)]">Midnight Forge</span>
       </h1>
       <p className="text-[var(--color-text-muted)] max-w-2xl text-lg mb-10 leading-relaxed font-sans">
-        Welcome to Ironvest. Experience the raw power of unyielding financial security.
+        Welcome to Ironvest. Experience the raw power of unyielding financial
+        security.
       </p>
-      
+
       <div className="iron-card max-w-md w-full text-left">
-        <h2 className="text-[var(--color-text-primary)] text-xl mb-4 uppercase tracking-wider">System Status</h2>
+        <h2 className="text-[var(--color-text-primary)] text-xl mb-4 uppercase tracking-wider">
+          System Status
+        </h2>
         <div className="flex justify-between items-center mb-2 font-sans">
           <span className="text-[var(--color-text-muted)]">Core Temp</span>
           <span className="text-[var(--color-text-primary)]">Optimal</span>

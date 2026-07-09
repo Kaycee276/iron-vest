@@ -1,4 +1,4 @@
-import Navbar from "./Navbar";
+import Navbar from './Navbar';
 
 const Header = () => {
   return (
@@ -24,9 +24,7 @@ const Header = () => {
         <button className="text-[var(--color-text-primary)] text-sm tracking-widest uppercase hover:text-[var(--color-accent)] transition-colors">
           Log In
         </button>
-        <button className="iron-btn">
-          Connect
-        </button>
+        <button className="iron-btn">Connect</button>
       </div>
     </header>
   );
