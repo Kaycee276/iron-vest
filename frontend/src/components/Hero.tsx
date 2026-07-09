@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Hero = () => {
   return (
     <main className="flex-1 flex flex-col lg:flex-row items-center justify-between px-6 py-10 md:p-16 max-w-7xl mx-auto w-full gap-12 lg:gap-16">
@@ -16,9 +18,12 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full">
-          <button className="iron-btn px-8 py-3 w-full sm:w-auto">
+          <Link
+            to="/register"
+            className="iron-btn px-8 py-3 w-full sm:w-auto text-center"
+          >
             Open Account
-          </button>
+          </Link>
           <button className="iron-btn bg-transparent border border-[var(--border-color)] text-[var(--color-text-primary)] hover:bg-[var(--color-bg-surface-elevated)] px-8 py-3 w-full sm:w-auto">
             Explore Yields
           </button>
@@ -26,7 +31,7 @@ const Hero = () => {
       </div>
 
       {/* Right side: Data Card */}
-      <div className="iron-card flex-1 max-w-md w-full text-left bg-[var(--color-bg-surface-elevated)] relative overflow-hidden">
+      <div className="iron-card flex-1 max-w-md w-full text-left bg-[var(--color-bg-surface-elevated)] border-t-4 border-[var(--color-accent)] relative overflow-hidden">
         {/* Subtle grid background to look "machined" */}
         <div
           className="absolute inset-0 opacity-5 pointer-events-none"

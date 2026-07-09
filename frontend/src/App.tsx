@@ -1,12 +1,21 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-[var(--color-bg-base)] flex flex-col">
-      <Header />
-      <Hero />
-    </div>
+    <BrowserRouter>
+      <div className="min-h-screen bg-[var(--color-bg-base)] flex flex-col">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 };
 
