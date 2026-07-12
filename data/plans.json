@@ -1,0 +1,45 @@
+[
+  {
+    "id": "standard-yield",
+    "name": "Standard Yield",
+    "minInvestment": "$10,000",
+    "lockup": "3 Months",
+    "targetApy": "8.5%",
+    "payout": "At Maturity",
+    "features": [
+      "Algorithmic stablecoin arbitrage",
+      "Automated smart contract compounding",
+      "Standard protocol insurance"
+    ],
+    "highlight": false
+  },
+  {
+    "id": "premium-accumulator",
+    "name": "Premium Accumulator",
+    "minInvestment": "$50,000",
+    "lockup": "6 Months",
+    "targetApy": "12.4%",
+    "payout": "Monthly Yield Distribution",
+    "features": [
+      "Delta-neutral derivatives trading",
+      "Multi-chain liquidity provisioning",
+      "Enhanced insurance coverage ($100k)"
+    ],
+    "highlight": true
+  },
+  {
+    "id": "institutional-vault",
+    "name": "Institutional Vault",
+    "minInvestment": "$250,000",
+    "lockup": "12 Months",
+    "targetApy": "15.0%+",
+    "payout": "Custom / Monthly",
+    "features": [
+      "Direct dark pool market making",
+      "Bespoke quantitative strategies",
+      "Dedicated account manager",
+      "Full cryptographic audit reports"
+    ],
+    "highlight": false
+  }
+]

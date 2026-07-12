@@ -80,6 +80,21 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+}
+
 button {
   cursor: pointer;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: #000000;
+}
+
+::-moz-selection {
+  background-color: var(--color-accent);
+  color: #000000;
 }

@@ -24,9 +24,12 @@ const Hero = () => {
           >
             Open Account
           </Link>
-          <button className="iron-btn bg-transparent border border-[var(--border-color)] text-[var(--color-text-primary)] hover:bg-[var(--color-bg-surface-elevated)] px-8 py-3 w-full sm:w-auto">
+          <a
+            href="#plans"
+            className="iron-btn bg-transparent border border-[var(--border-color)] text-[var(--color-text-primary)] hover:bg-[var(--color-bg-surface-elevated)] px-8 py-3 w-full sm:w-auto"
+          >
             Explore Yields
-          </button>
+          </a>
         </div>
       </div>
 
@@ -81,9 +84,12 @@ const Hero = () => {
           </div>
         </div>
 
-        <button className="iron-btn w-full relative z-10 border border-[var(--color-accent)] bg-transparent hover:bg-[var(--color-accent)] hover:text-black">
+        <Link
+          to="/register"
+          className="iron-btn w-full relative z-10 border border-[var(--color-accent)] bg-transparent hover:bg-[var(--color-accent)] hover:text-black"
+        >
           View Live Markets
-        </button>
+        </Link>
       </div>
     </main>
   );

@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Hero from './components/Hero';
+import Landing from './pages/Landing';
 import Login from './pages/Login';
 import Register from './pages/Register';
 
@@ -10,7 +10,7 @@ const App = () => {
       <div className="min-h-screen bg-[var(--color-bg-base)] flex flex-col">
         <Header />
         <Routes>
-          <Route path="/" element={<Hero />} />
+          <Route path="/" element={<Landing />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
         </Routes>
