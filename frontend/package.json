@@ -11,8 +11,7 @@
     "preview": "vite preview",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "validate": "pnpm run lint && pnpm run typecheck && pnpm run format",
-    "prepare": "husky"
+    "validate": "pnpm run lint && pnpm run typecheck && pnpm run format"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.2",
@@ -34,20 +33,10 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.3",
     "globals": "^17.7.0",
-    "husky": "^9.1.7",
     "lint-staged": "^17.0.8",
     "prettier": "^3.9.5",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.62.0",
     "vite": "^8.1.1"
-  },
-  "lint-staged": {
-    "*.{js,ts,jsx,tsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.{css,json,md}": [
-      "prettier --write"
-    ]
   }
 }

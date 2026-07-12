@@ -1,0 +1,34 @@
+{
+  "name": "ironvest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.33.4",
+  "lint-staged": {
+    "frontend/**/*.{js,ts,jsx,tsx}": [
+      "pnpm --filter frontend exec eslint --fix",
+      "pnpm --filter frontend exec prettier --write"
+    ],
+    "frontend/**/*.{css,json,md}": [
+      "pnpm --filter frontend exec prettier --write"
+    ],
+    "backend/**/*.{js,ts}": [
+      "pnpm --filter backend exec eslint --fix",
+      "pnpm --filter backend exec prettier --write"
+    ],
+    "backend/**/*.{json,md}": [
+      "pnpm --filter backend exec prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.8"
+  }
+}
