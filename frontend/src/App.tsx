@@ -7,7 +7,7 @@ import Register from './pages/Register';
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-[var(--color-bg-base)] flex flex-col">
+      <div className="min-h-screen bg-(--color-bg-base) flex flex-col">
         <Header />
         <Routes>
           <Route path="/" element={<Landing />} />

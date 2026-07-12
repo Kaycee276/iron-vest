@@ -88,7 +88,7 @@ const Register = () => {
 
   return (
     <main className="flex-1 flex flex-col items-center justify-center p-6 w-full">
-      <div className="iron-card max-w-md w-full bg-[var(--color-bg-surface-elevated)] border-t-4 border-t-[var(--color-accent)] relative overflow-hidden">
+      <div className="iron-card max-w-md w-full bg-(--color-bg-surface-elevated) border-t-4 border-t-(--color-accent) relative overflow-hidden">
         {/* Subtle grid background */}
         <div
           className="absolute inset-0 opacity-5 pointer-events-none"
@@ -100,10 +100,10 @@ const Register = () => {
         ></div>
 
         <div className="relative z-10 text-center mb-8">
-          <h1 className="text-3xl text-[var(--color-text-primary)] uppercase tracking-widest mb-2 font-['Orbitron']">
+          <h1 className="text-3xl text-(--color-text-primary) uppercase tracking-widest mb-2 font-['Orbitron']">
             Initialize
           </h1>
-          <p className="text-[var(--color-text-muted)] font-sans">
+          <p className="text-(--color-text-muted) font-sans">
             Set up your secure Ironvest account.
           </p>
         </div>
@@ -115,7 +115,7 @@ const Register = () => {
           <div className="flex flex-col gap-2">
             <label
               htmlFor="name"
-              className="text-sm uppercase tracking-wider text-[var(--color-text-primary)]"
+              className="text-sm uppercase tracking-wider text-(--color-text-primary)"
             >
               Full Name
             </label>
@@ -125,10 +125,10 @@ const Register = () => {
               value={formData.name}
               onChange={handleChange}
               onBlur={handleBlur}
-              className={`w-full bg-[var(--color-bg-base)] border p-3 text-[var(--color-text-primary)] focus:outline-none transition-colors ${
+              className={`w-full bg-(--color-bg-base) border p-3 text-(--color-text-primary) focus:outline-none transition-colors ${
                 errors.name
                   ? 'border-red-500 focus:border-red-500'
-                  : 'border-[var(--border-color)] focus:border-[var(--color-accent)]'
+                  : 'border-(--border-color) focus:border-(--color-accent)'
               }`}
               placeholder="John Doe"
             />
@@ -142,7 +142,7 @@ const Register = () => {
           <div className="flex flex-col gap-2">
             <label
               htmlFor="email"
-              className="text-sm uppercase tracking-wider text-[var(--color-text-primary)]"
+              className="text-sm uppercase tracking-wider text-(--color-text-primary)"
             >
               Email Address
             </label>
@@ -152,10 +152,10 @@ const Register = () => {
               value={formData.email}
               onChange={handleChange}
               onBlur={handleBlur}
-              className={`w-full bg-[var(--color-bg-base)] border p-3 text-[var(--color-text-primary)] focus:outline-none transition-colors ${
+              className={`w-full bg-(--color-bg-base) border p-3 text-(--color-text-primary) focus:outline-none transition-colors ${
                 errors.email
                   ? 'border-red-500 focus:border-red-500'
-                  : 'border-[var(--border-color)] focus:border-[var(--color-accent)]'
+                  : 'border-(--border-color) focus:border-(--color-accent)'
               }`}
               placeholder="operator@ironvest.com"
             />
@@ -169,7 +169,7 @@ const Register = () => {
           <div className="flex flex-col gap-2">
             <label
               htmlFor="password"
-              className="text-sm uppercase tracking-wider text-[var(--color-text-primary)]"
+              className="text-sm uppercase tracking-wider text-(--color-text-primary)"
             >
               Master Passcode
             </label>
@@ -179,16 +179,16 @@ const Register = () => {
                 id="password"
                 value={formData.password}
                 onChange={handleChange}
-                className={`w-full bg-[var(--color-bg-base)] border p-3 pr-12 text-[var(--color-text-primary)] focus:outline-none transition-colors ${
+                className={`w-full bg-(--color-bg-base) border p-3 pr-12 text-(--color-text-primary) focus:outline-none transition-colors ${
                   errors.password
                     ? 'border-red-500 focus:border-red-500'
-                    : 'border-[var(--border-color)] focus:border-[var(--color-accent)]'
+                    : 'border-(--border-color) focus:border-(--color-accent)'
                 }`}
                 placeholder="••••••••••••"
               />
               <button
                 type="button"
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)] transition-colors"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-(--color-text-muted) hover:text-(--color-text-primary) transition-colors"
                 onClick={() => setShowPassword(!showPassword)}
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
               >
@@ -244,12 +244,12 @@ const Register = () => {
           </button>
         </form>
 
-        <div className="relative z-10 mt-8 text-center border-t border-[var(--border-color)]/30 pt-4">
-          <p className="text-sm text-[var(--color-text-muted)] font-sans">
+        <div className="relative z-10 mt-8 text-center border-t border-(--border-color)/30 pt-4">
+          <p className="text-sm text-(--color-text-muted) font-sans">
             Already have an account?{' '}
             <Link
               to="/login"
-              className="text-[var(--color-accent)] hover:text-[var(--color-text-primary)] transition-colors uppercase tracking-widest text-xs font-bold"
+              className="text-(--color-accent) hover:text-(--color-text-primary) transition-colors uppercase tracking-widest text-xs font-bold"
             >
               Sign In
             </Link>

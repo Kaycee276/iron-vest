@@ -46,7 +46,7 @@ const Login = () => {
 
   return (
     <main className="flex-1 flex flex-col items-center justify-center p-6 w-full">
-      <div className="iron-card max-w-md w-full bg-[var(--color-bg-surface-elevated)] border-t-4 border-t-[var(--color-accent)] relative overflow-hidden">
+      <div className="iron-card max-w-md w-full bg-() border-t-4 border-t-() relative overflow-hidden">
         {/* Subtle grid background */}
         <div
           className="absolute inset-0 opacity-5 pointer-events-none"
@@ -58,12 +58,10 @@ const Login = () => {
         ></div>
 
         <div className="relative z-10 text-center mb-8">
-          <h1 className="text-3xl text-[var(--color-text-primary)] uppercase tracking-widest mb-2 font-['Orbitron']">
+          <h1 className="text-3xl text-() uppercase tracking-widest mb-2 font-['Orbitron']">
             Sign In
           </h1>
-          <p className="text-[var(--color-text-muted)] font-sans">
-            Access your secure portfolio.
-          </p>
+          <p className="text-() font-sans">Access your secure portfolio.</p>
         </div>
 
         <form
@@ -73,7 +71,7 @@ const Login = () => {
           <div className="flex flex-col gap-2">
             <label
               htmlFor="email"
-              className="text-sm uppercase tracking-wider text-[var(--color-text-primary)]"
+              className="text-sm uppercase tracking-wider text-()"
             >
               Email Address
             </label>
@@ -82,10 +80,10 @@ const Login = () => {
               id="email"
               value={formData.email}
               onChange={handleChange}
-              className={`w-full bg-[var(--color-bg-base)] border p-3 text-[var(--color-text-primary)] focus:outline-none transition-colors ${
+              className={`w-full bg-() border p-3 text-() focus:outline-none transition-colors ${
                 errors.email
                   ? 'border-red-500 focus:border-red-500'
-                  : 'border-[var(--border-color)] focus:border-[var(--color-accent)]'
+                  : 'border-() focus:border-()'
               }`}
               placeholder="operator@ironvest.com"
             />
@@ -100,13 +98,13 @@ const Login = () => {
             <div className="flex justify-between items-center">
               <label
                 htmlFor="password"
-                className="text-sm uppercase tracking-wider text-[var(--color-text-primary)]"
+                className="text-sm uppercase tracking-wider text-()"
               >
                 Passcode
               </label>
               <Link
                 to="#"
-                className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors"
+                className="text-xs text-() hover:text-() transition-colors"
               >
                 Forgot Password?
               </Link>
@@ -117,16 +115,16 @@ const Login = () => {
                 id="password"
                 value={formData.password}
                 onChange={handleChange}
-                className={`w-full bg-[var(--color-bg-base)] border p-3 pr-12 text-[var(--color-text-primary)] focus:outline-none transition-colors ${
+                className={`w-full bg-() border p-3 pr-12 text-() focus:outline-none transition-colors ${
                   errors.password
                     ? 'border-red-500 focus:border-red-500'
-                    : 'border-[var(--border-color)] focus:border-[var(--color-accent)]'
+                    : 'border-() focus:border-()'
                 }`}
                 placeholder="••••••••••••"
               />
               <button
                 type="button"
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)] transition-colors"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-() hover:text-() transition-colors"
                 onClick={() => setShowPassword(!showPassword)}
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
               >
@@ -180,12 +178,12 @@ const Login = () => {
           </button>
         </form>
 
-        <div className="relative z-10 mt-8 text-center border-t border-[var(--border-color)]/30 pt-4">
-          <p className="text-sm text-[var(--color-text-muted)] font-sans">
+        <div className="relative z-10 mt-8 text-center border-t border-(--border-color)/30 pt-4">
+          <p className="text-sm text-() font-sans">
             Don't have an account?{' '}
             <Link
               to="/register"
-              className="text-[var(--color-accent)] hover:text-[var(--color-text-primary)] transition-colors uppercase tracking-widest text-xs font-bold"
+              className="text-() hover:text-() transition-colors uppercase tracking-widest text-xs font-bold"
             >
               Register Here
             </Link>
