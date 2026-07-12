@@ -11,6 +11,7 @@
     "preview": "vite preview",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "validate": "pnpm run lint && pnpm run typecheck && pnpm run format",
     "prepare": "husky"
   },
   "dependencies": {
