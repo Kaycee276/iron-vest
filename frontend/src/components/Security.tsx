@@ -4,15 +4,15 @@ const Security = () => {
   return (
     <section
       id="security"
-      className="w-full py-24 px-6 md:px-16 border-t border-() bg-()"
+      className="w-full py-24 px-6 md:px-16 border-t border-(--border-color) bg-(--color-bg-base)"
     >
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
         {/* Left Side: Visual/Specs */}
         <div className="flex-1 w-full relative">
-          <div className="bg-() border-l border-() relative p-8">
-            <div className="absolute top-0 left-0 w-2 h-full bg-()" />
+          <div className="bg-(--color-bg-surface) border-l border-(--color-accent) relative p-8">
+            <div className="absolute top-0 left-0 w-2 h-full bg-(--color-accent)" />
 
-            <h3 className="text-xl text-() font-['Orbitron'] uppercase tracking-widest mb-6 border-b border-() pb-4">
+            <h3 className="text-xl text-(--color-text-primary) font-['Orbitron'] uppercase tracking-widest mb-6 border-b border-(--border-color) pb-4">
               Infrastructure Protocol
             </h3>
 
@@ -59,29 +59,29 @@ const Security = () => {
 
         {/* Right Side: Copy */}
         <div className="flex-1 text-center lg:text-left">
-          <h2 className="text-sm text-() font-['Orbitron'] tracking-[0.2em] uppercase mb-4">
+          <h2 className="text-sm text-(--color-accent) font-['Orbitron'] tracking-[0.2em] uppercase mb-4">
             Fortress Architecture
           </h2>
-          <h3 className="text-3xl md:text-5xl text-() font-['Orbitron'] uppercase tracking-widest mb-8 leading-tight">
+          <h3 className="text-3xl md:text-5xl text-(--color-text-primary) font-['Orbitron'] uppercase tracking-widest mb-8 leading-tight">
             Security Without <br /> Compromise
           </h3>
-          <p className="text-() font-sans text-base sm:text-lg mb-8 leading-relaxed">
+          <p className="text-(--color-text-muted) font-sans text-base sm:text-lg mb-8 leading-relaxed">
             We operate on the premise of absolute paranoia. Ironvest utilizes
             hardware security modules (HSMs) distributed globally, requiring
             multi-layered biometric and geographic authentication for any
             withdrawal over zero limits.
           </p>
-          <ul className="space-y-4 mb-10 text-left font-sans text-()">
+          <ul className="space-y-4 mb-10 text-left font-sans text-(--color-text-muted)">
             <li className="flex items-center gap-3">
-              <div className="w-2 h-2 bg-()" />
+              <div className="w-2 h-2 bg-(--color-accent)" />
               100% Reserve Ratio at all times
             </li>
             <li className="flex items-center gap-3">
-              <div className="w-2 h-2 bg-()" />
+              <div className="w-2 h-2 bg-(--color-accent)" />
               Automated smart contract auditing
             </li>
             <li className="flex items-center gap-3">
-              <div className="w-2 h-2 bg-()" />
+              <div className="w-2 h-2 bg-(--color-accent)" />
               Insurance coverage up to $500M per account
             </li>
           </ul>

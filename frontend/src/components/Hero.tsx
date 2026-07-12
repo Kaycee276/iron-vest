@@ -32,7 +32,7 @@ const Hero = () => {
       </div>
 
       {/* Right side: Data Card */}
-      <div className="iron-card flex-1 max-w-md w-full text-left bg-(--color-bg-surface-elevated) border-t-4 border-(--color-accent) relative overflow-hidden">
+      <div className="iron-card flex-1 max-w-md w-full text-left border-t-4 border-(--color-accent) relative overflow-hidden">
         {/* Subtle grid background to look "machined" */}
         <div
           className="absolute inset-0 opacity-5 pointer-events-none"
