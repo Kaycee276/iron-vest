@@ -6,13 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky",
-    "validate": "cd frontend && pnpm validate && cd ../backend && pnpm validate"
+    "validate": "secretlint '**/*' && cd frontend && pnpm validate && cd ../backend && pnpm validate"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.33.4",
   "lint-staged": {
+    "*": [
+      "secretlint"
+    ],
     "frontend/**/*.{js,ts,jsx,tsx}": [
       "pnpm --filter frontend exec eslint --fix",
       "pnpm --filter frontend exec prettier --write"
@@ -29,7 +32,9 @@
     ]
   },
   "devDependencies": {
+    "@secretlint/secretlint-rule-preset-recommend": "^13.0.2",
     "husky": "^9.1.7",
-    "lint-staged": "^17.0.8"
+    "lint-staged": "^17.0.8",
+    "secretlint": "^13.0.2"
   }
 }
