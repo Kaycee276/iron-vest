@@ -1,0 +1,173 @@
+
+> backend@0.0.1 lint /home/kaycee/Desktop/Side/ironvest/backend
+> eslint "{src,apps,libs,test}/**/*.ts" --fix
+
+
+/home/kaycee/Desktop/Side/ironvest/backend/src/app.module.ts
+   7:2   error  Unsafe call of a type that could not be resolved                 @typescript-eslint/no-unsafe-call
+  11:5   error  Unsafe call of a type that could not be resolved                 @typescript-eslint/no-unsafe-call
+  11:21  error  Unsafe member access .forRoot on a type that cannot be resolved  @typescript-eslint/no-unsafe-member-access
+  21:7   error  Unsafe assignment of an error typed value                        @typescript-eslint/no-unsafe-assignment
+  22:7   error  Unsafe assignment of an error typed value                        @typescript-eslint/no-unsafe-assignment
+
+/home/kaycee/Desktop/Side/ironvest/backend/src/auth/auth.controller.spec.ts
+   8:11  error  Unsafe assignment of an error typed value                                    @typescript-eslint/no-unsafe-assignment
+   8:41  error  Unsafe call of a type that could not be resolved                             @typescript-eslint/no-unsafe-call
+   8:41  error  Unsafe call of a type that could not be resolved                             @typescript-eslint/no-unsafe-call
+   8:46  error  Unsafe member access .createTestingModule on a type that cannot be resolved  @typescript-eslint/no-unsafe-member-access
+  10:8   error  Unsafe member access .compile on a type that cannot be resolved              @typescript-eslint/no-unsafe-member-access
+  12:5   error  Unsafe assignment of an error typed value                                    @typescript-eslint/no-unsafe-assignment
+  12:18  error  Unsafe call of a type that could not be resolved                             @typescript-eslint/no-unsafe-call
+  12:25  error  Unsafe member access .get on a type that cannot be resolved                  @typescript-eslint/no-unsafe-member-access
+
+/home/kaycee/Desktop/Side/ironvest/backend/src/auth/auth.controller.ts
+  16:2   error    Unsafe call of a type that could not be resolved                              @typescript-eslint/no-unsafe-call
+  20:4   error    Unsafe call of a type that could not be resolved                              @typescript-eslint/no-unsafe-call
+  22:6   error    Unsafe call of a type that could not be resolved                              @typescript-eslint/no-unsafe-call
+  23:6   error    Unsafe call of a type that could not be resolved                              @typescript-eslint/no-unsafe-call
+  25:13  error    Unsafe object destructuring of a property with an error typed value           @typescript-eslint/no-unsafe-assignment
+  25:27  error    Unsafe object destructuring of a property with an error typed value           @typescript-eslint/no-unsafe-assignment
+  27:37  warning  Unsafe argument of type error typed assigned to a parameter of type `string`  @typescript-eslint/no-unsafe-argument
+  28:14  error    Unsafe assignment of an error typed value                                     @typescript-eslint/no-unsafe-assignment
+  31:4   error    Unsafe call of a type that could not be resolved                              @typescript-eslint/no-unsafe-call
+  32:4   error    Unsafe call of a type that could not be resolved                              @typescript-eslint/no-unsafe-call
+  32:24  error    Unsafe member access .OK on a type that cannot be resolved                    @typescript-eslint/no-unsafe-member-access
+  34:6   error    Unsafe call of a type that could not be resolved                              @typescript-eslint/no-unsafe-call
+  35:6   error    Unsafe call of a type that could not be resolved                              @typescript-eslint/no-unsafe-call
+  37:13  error    Unsafe object destructuring of a property with an error typed value           @typescript-eslint/no-unsafe-assignment
+  37:27  error    Unsafe object destructuring of a property with an error typed value           @typescript-eslint/no-unsafe-assignment
+  39:37  warning  Unsafe argument of type error typed assigned to a parameter of type `string`  @typescript-eslint/no-unsafe-argument
+  40:14  error    Unsafe assignment of an error typed value                                     @typescript-eslint/no-unsafe-assignment
+  43:4   error    Unsafe call of a type that could not be resolved                              @typescript-eslint/no-unsafe-call
+  44:4   error    Unsafe call of a type that could not be resolved                              @typescript-eslint/no-unsafe-call
+  44:24  error    Unsafe member access .OK on a type that cannot be resolved                    @typescript-eslint/no-unsafe-member-access
+  46:6   error    Unsafe call of a type that could not be resolved                              @typescript-eslint/no-unsafe-call
+  47:6   error    Unsafe call of a type that could not be resolved                              @typescript-eslint/no-unsafe-call
+  49:11  error    Unsafe assignment of an `any` value                                           @typescript-eslint/no-unsafe-assignment
+  49:39  error    Unsafe member access .refresh_token on an `any` value                         @typescript-eslint/no-unsafe-member-access
+  51:13  error    Unsafe construction of a type that could not be resolved                      @typescript-eslint/no-unsafe-call
+  55:7   error    Unsafe object destructuring of a property with an error typed value           @typescript-eslint/no-unsafe-assignment
+  56:22  error    Unsafe object destructuring of a property with an error typed value           @typescript-eslint/no-unsafe-assignment
+  58:46  warning  Unsafe argument of type `any` assigned to a parameter of type `string`        @typescript-eslint/no-unsafe-argument
+  59:37  warning  Unsafe argument of type error typed assigned to a parameter of type `string`  @typescript-eslint/no-unsafe-argument
+  60:14  error    Unsafe assignment of an error typed value                                     @typescript-eslint/no-unsafe-assignment
+  63:4   error    Unsafe call of a type that could not be resolved                              @typescript-eslint/no-unsafe-call
+  64:4   error    Unsafe call of a type that could not be resolved                              @typescript-eslint/no-unsafe-call
+  64:24  error    Unsafe member access .OK on a type that cannot be resolved                    @typescript-eslint/no-unsafe-member-access
+  65:17  error    Unsafe call of a type that could not be resolved                              @typescript-eslint/no-unsafe-call
+  65:38  error    Unsafe call of a type that could not be resolved                              @typescript-eslint/no-unsafe-call
+  66:11  error    Unsafe assignment of an `any` value                                           @typescript-eslint/no-unsafe-assignment
+  66:39  error    Unsafe member access .refresh_token on an `any` value                         @typescript-eslint/no-unsafe-member-access
+  68:37  warning  Unsafe argument of type `any` assigned to a parameter of type `string`        @typescript-eslint/no-unsafe-argument
+
+/home/kaycee/Desktop/Side/ironvest/backend/src/auth/auth.module.ts
+   7:2   error  Unsafe call of a type that could not be resolved                  @typescript-eslint/no-unsafe-call
+  10:5   error  Unsafe call of a type that could not be resolved                  @typescript-eslint/no-unsafe-call
+  10:15  error  Unsafe member access .register on a type that cannot be resolved  @typescript-eslint/no-unsafe-member-access
+
+/home/kaycee/Desktop/Side/ironvest/backend/src/auth/auth.service.spec.ts
+   8:11  error  Unsafe assignment of an error typed value                                    @typescript-eslint/no-unsafe-assignment
+   8:41  error  Unsafe call of a type that could not be resolved                             @typescript-eslint/no-unsafe-call
+   8:41  error  Unsafe call of a type that could not be resolved                             @typescript-eslint/no-unsafe-call
+   8:46  error  Unsafe member access .createTestingModule on a type that cannot be resolved  @typescript-eslint/no-unsafe-member-access
+  10:8   error  Unsafe member access .compile on a type that cannot be resolved              @typescript-eslint/no-unsafe-member-access
+  12:5   error  Unsafe assignment of an error typed value                                    @typescript-eslint/no-unsafe-assignment
+  12:15  error  Unsafe call of a type that could not be resolved                             @typescript-eslint/no-unsafe-call
+  12:22  error  Unsafe member access .get on a type that cannot be resolved                  @typescript-eslint/no-unsafe-member-access
+
+/home/kaycee/Desktop/Side/ironvest/backend/src/auth/auth.service.ts
+   14:2   error    Unsafe call of a type that could not be resolved                                                        @typescript-eslint/no-unsafe-call
+   28:13  error    Unsafe construction of a type that could not be resolved                                                @typescript-eslint/no-unsafe-call
+   50:13  error    Unsafe construction of a type that could not be resolved                                                @typescript-eslint/no-unsafe-call
+   55:13  error    Unsafe construction of a type that could not be resolved                                                @typescript-eslint/no-unsafe-call
+   64:7   error    Unsafe assignment of an error typed value                                                               @typescript-eslint/no-unsafe-assignment
+   64:17  error    Unsafe call of a type that could not be resolved                                                        @typescript-eslint/no-unsafe-call
+   64:33  error    Unsafe member access .verify on a type that cannot be resolved                                          @typescript-eslint/no-unsafe-member-access
+   65:14  error    'e' is defined but never used                                                                           @typescript-eslint/no-unused-vars
+   66:13  error    Unsafe construction of a type that could not be resolved                                                @typescript-eslint/no-unsafe-call
+   69:11  error    Unsafe assignment of an error typed value                                                               @typescript-eslint/no-unsafe-assignment
+   69:28  error    Unsafe member access .sub on a type that cannot be resolved                                             @typescript-eslint/no-unsafe-member-access
+   70:63  error    Unsafe assignment of an error typed value                                                               @typescript-eslint/no-unsafe-assignment
+   72:13  error    Unsafe construction of a type that could not be resolved                                                @typescript-eslint/no-unsafe-call
+   77:7   warning  Unsafe argument of type error typed assigned to a parameter of type `string`                            @typescript-eslint/no-unsafe-argument
+   80:13  error    Unsafe construction of a type that could not be resolved                                                @typescript-eslint/no-unsafe-call
+   88:13  error    Unsafe assignment of an error typed value                                                               @typescript-eslint/no-unsafe-assignment
+   88:23  error    Unsafe call of a type that could not be resolved                                                        @typescript-eslint/no-unsafe-call
+   88:39  error    Unsafe member access .verify on a type that cannot be resolved                                          @typescript-eslint/no-unsafe-member-access
+   92:18  error    Unsafe assignment of an error typed value                                                               @typescript-eslint/no-unsafe-assignment
+   92:30  error    Unsafe member access .sub on a type that cannot be resolved                                             @typescript-eslint/no-unsafe-member-access
+   95:14  error    'e' is defined but never used                                                                           @typescript-eslint/no-unused-vars
+  102:11  error    Unsafe assignment of an error typed value                                                               @typescript-eslint/no-unsafe-assignment
+  102:26  error    Unsafe call of a type that could not be resolved                                                        @typescript-eslint/no-unsafe-call
+  102:42  error    Unsafe member access .sign on a type that cannot be resolved                                            @typescript-eslint/no-unsafe-member-access
+  103:11  error    Unsafe assignment of an error typed value                                                               @typescript-eslint/no-unsafe-assignment
+  103:27  error    Unsafe call of a type that could not be resolved                                                        @typescript-eslint/no-unsafe-call
+  103:43  error    Unsafe member access .sign on a type that cannot be resolved                                            @typescript-eslint/no-unsafe-member-access
+  105:50  warning  Unsafe argument of type error typed assigned to a parameter of type `string | Buffer<ArrayBufferLike>`  @typescript-eslint/no-unsafe-argument
+  112:7   error    Unsafe assignment of an error typed value                                                               @typescript-eslint/no-unsafe-assignment
+  113:7   error    Unsafe assignment of an error typed value                                                               @typescript-eslint/no-unsafe-assignment
+
+/home/kaycee/Desktop/Side/ironvest/backend/src/auth/dto/login.dto.ts
+  4:4  error  Unsafe call of a type that could not be resolved  @typescript-eslint/no-unsafe-call
+  7:4  error  Unsafe call of a type that could not be resolved  @typescript-eslint/no-unsafe-call
+  8:4  error  Unsafe call of a type that could not be resolved  @typescript-eslint/no-unsafe-call
+
+/home/kaycee/Desktop/Side/ironvest/backend/src/auth/dto/register.dto.ts
+   4:4  error  Unsafe call of a type that could not be resolved  @typescript-eslint/no-unsafe-call
+   7:4  error  Unsafe call of a type that could not be resolved  @typescript-eslint/no-unsafe-call
+   8:4  error  Unsafe call of a type that could not be resolved  @typescript-eslint/no-unsafe-call
+  11:4  error  Unsafe call of a type that could not be resolved  @typescript-eslint/no-unsafe-call
+  12:4  error  Unsafe call of a type that could not be resolved  @typescript-eslint/no-unsafe-call
+
+/home/kaycee/Desktop/Side/ironvest/backend/src/main.ts
+   8:9   error  Unsafe assignment of an error typed value                               @typescript-eslint/no-unsafe-assignment
+   8:21  error  Unsafe call of a type that could not be resolved                        @typescript-eslint/no-unsafe-call
+   8:33  error  Unsafe member access .create on a type that cannot be resolved          @typescript-eslint/no-unsafe-member-access
+   9:3   error  Unsafe call of a type that could not be resolved                        @typescript-eslint/no-unsafe-call
+   9:7   error  Unsafe member access .enableCors on a type that cannot be resolved      @typescript-eslint/no-unsafe-member-access
+  13:3   error  Unsafe call of a type that could not be resolved                        @typescript-eslint/no-unsafe-call
+  13:7   error  Unsafe member access .use on a type that cannot be resolved             @typescript-eslint/no-unsafe-member-access
+  13:11  error  Unsafe call of a type that could not be resolved                        @typescript-eslint/no-unsafe-call
+  14:3   error  Unsafe call of a type that could not be resolved                        @typescript-eslint/no-unsafe-call
+  14:7   error  Unsafe member access .useGlobalPipes on a type that cannot be resolved  @typescript-eslint/no-unsafe-member-access
+  14:22  error  Unsafe construction of a type that could not be resolved                @typescript-eslint/no-unsafe-call
+  15:9   error  Unsafe call of a type that could not be resolved                        @typescript-eslint/no-unsafe-call
+  15:13  error  Unsafe member access .listen on a type that cannot be resolved          @typescript-eslint/no-unsafe-member-access
+
+/home/kaycee/Desktop/Side/ironvest/backend/src/prisma/prisma.module.ts
+  4:2  error  Unsafe call of a type that could not be resolved  @typescript-eslint/no-unsafe-call
+  5:2  error  Unsafe call of a type that could not be resolved  @typescript-eslint/no-unsafe-call
+
+/home/kaycee/Desktop/Side/ironvest/backend/src/prisma/prisma.service.spec.ts
+   8:11  error  Unsafe assignment of an error typed value                                    @typescript-eslint/no-unsafe-assignment
+   8:41  error  Unsafe call of a type that could not be resolved                             @typescript-eslint/no-unsafe-call
+   8:41  error  Unsafe call of a type that could not be resolved                             @typescript-eslint/no-unsafe-call
+   8:46  error  Unsafe member access .createTestingModule on a type that cannot be resolved  @typescript-eslint/no-unsafe-member-access
+  10:8   error  Unsafe member access .compile on a type that cannot be resolved              @typescript-eslint/no-unsafe-member-access
+  12:5   error  Unsafe assignment of an error typed value                                    @typescript-eslint/no-unsafe-assignment
+  12:15  error  Unsafe call of a type that could not be resolved                             @typescript-eslint/no-unsafe-call
+  12:22  error  Unsafe member access .get on a type that cannot be resolved                  @typescript-eslint/no-unsafe-member-access
+
+/home/kaycee/Desktop/Side/ironvest/backend/src/prisma/prisma.service.ts
+  6:2  error  Unsafe call of a type that could not be resolved  @typescript-eslint/no-unsafe-call
+
+/home/kaycee/Desktop/Side/ironvest/backend/test/app.e2e-spec.ts
+  11:11  error    Unsafe assignment of an error typed value                                      @typescript-eslint/no-unsafe-assignment
+  11:48  error    Unsafe call of a type that could not be resolved                               @typescript-eslint/no-unsafe-call
+  11:48  error    Unsafe call of a type that could not be resolved                               @typescript-eslint/no-unsafe-call
+  11:53  error    Unsafe member access .createTestingModule on a type that cannot be resolved    @typescript-eslint/no-unsafe-member-access
+  13:8   error    Unsafe member access .compile on a type that cannot be resolved                @typescript-eslint/no-unsafe-member-access
+  15:5   error    Unsafe assignment of an error typed value                                      @typescript-eslint/no-unsafe-assignment
+  15:11  error    Unsafe call of a type that could not be resolved                               @typescript-eslint/no-unsafe-call
+  15:25  error    Unsafe member access .createNestApplication on a type that cannot be resolved  @typescript-eslint/no-unsafe-member-access
+  16:11  error    Unsafe call of a type that could not be resolved                               @typescript-eslint/no-unsafe-call
+  16:15  error    Unsafe member access .init on a type that cannot be resolved                   @typescript-eslint/no-unsafe-member-access
+  20:20  warning  Unsafe argument of type error typed assigned to a parameter of type `App`      @typescript-eslint/no-unsafe-argument
+  20:20  error    Unsafe call of a type that could not be resolved                               @typescript-eslint/no-unsafe-call
+  20:24  error    Unsafe member access .getHttpServer on a type that cannot be resolved          @typescript-eslint/no-unsafe-member-access
+  27:11  error    Unsafe call of a type that could not be resolved                               @typescript-eslint/no-unsafe-call
+  27:15  error    Unsafe member access .close on a type that cannot be resolved                  @typescript-eslint/no-unsafe-member-access
+
+✖ 139 problems (131 errors, 8 warnings)
+
+ ELIFECYCLE  Command failed with exit code 1.

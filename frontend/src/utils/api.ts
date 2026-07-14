@@ -24,10 +24,44 @@ class ApiClient {
       headers.set('Authorization', `Bearer ${token}`);
     }
 
-    const response = await fetch(`${API_URL}${endpoint}`, {
+    const fetchOptions: RequestInit = {
       ...options,
       headers,
-    });
+      credentials: 'include',
+    };
+
+    let response = await fetch(`${API_URL}${endpoint}`, fetchOptions);
+
+    if (
+      response.status === 401 &&
+      !endpoint.includes('/auth/refresh') &&
+      !endpoint.includes('/auth/login') &&
+      !endpoint.includes('/auth/register')
+    ) {
+      try {
+        const refreshResponse = await fetch(`${API_URL}/auth/refresh`, {
+          method: 'POST',
+          credentials: 'include',
+        });
+
+        if (refreshResponse.ok) {
+          const { access_token } = await refreshResponse.json();
+          localStorage.setItem('access_token', access_token);
+
+          headers.set('Authorization', `Bearer ${access_token}`);
+          response = await fetch(`${API_URL}${endpoint}`, {
+            ...fetchOptions,
+            headers,
+          });
+        } else {
+          localStorage.removeItem('access_token');
+          localStorage.removeItem('user');
+          window.location.href = '/login';
+        }
+      } catch {
+        // ignore
+      }
+    }
 
     if (!response.ok) {
       const errorData = await response.json().catch(() => null);
@@ -51,6 +85,10 @@ class ApiClient {
       this.request<AuthResponse>('/auth/register', {
         method: 'POST',
         body: JSON.stringify(data),
+      }),
+    logout: () =>
+      this.request<{ message: string }>('/auth/logout', {
+        method: 'POST',
       }),
   };
 }
