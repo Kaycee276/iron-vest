@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
+import { useAuthStore } from '../store/useAuthStore';
 
 const Hero = () => {
+  const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
   return (
     <main className="flex-1 flex flex-col lg:flex-row items-center justify-between px-6 py-10 md:p-16 max-w-7xl mx-auto w-full gap-12 lg:gap-16">
       {/* Left side: Copy */}
@@ -17,10 +19,10 @@ const Hero = () => {
 
         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full">
           <Link
-            to="/register"
+            to={isAuthenticated ? '/home' : '/register'}
             className="iron-btn px-8 py-3 w-full sm:w-auto text-center"
           >
-            Open Account
+            {isAuthenticated ? 'Go to Dashboard' : 'Open Account'}
           </Link>
           <a
             href="#plans"
@@ -79,10 +81,10 @@ const Hero = () => {
         </div>
 
         <Link
-          to="/register"
+          to={isAuthenticated ? '/home' : '/register'}
           className="iron-btn w-full relative z-10 border border-(--color-accent) bg-transparent hover:bg-(--color-accent) hover:text-black"
         >
-          View Live Markets
+          {isAuthenticated ? 'View Dashboard' : 'View Live Markets'}
         </Link>
       </div>
     </main>

@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { z } from 'zod';
 import { loginSchema } from '../utils/validators';
 import { useAuthStore } from '../store/useAuthStore';
+import { api } from '../utils/api';
+import { Loader2 } from 'lucide-react';
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -10,19 +12,24 @@ const Login = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const login = useAuthStore((state) => state.login);
+  const isLoading = useAuthStore((state) => state.isLoading);
+  const setLoading = useAuthStore((state) => state.setLoading);
   const navigate = useNavigate();
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrors({});
+    setLoading(true);
 
     try {
       // Validate with Zod
       loginSchema.parse(formData);
 
-      // If valid, simulate login
-      login({ id: '1', name: 'Operator', email: formData.email });
-      navigate('/');
+      // Call API login
+      const response = await api.auth.login(formData);
+
+      login(response.user, response.access_token);
+      navigate('/home');
     } catch (error) {
       if (error instanceof z.ZodError) {
         const fieldErrors: Record<string, string> = {};
@@ -32,7 +39,11 @@ const Login = () => {
           }
         });
         setErrors(fieldErrors);
+      } else if (error instanceof Error) {
+        setErrors({ email: error.message });
       }
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -175,8 +186,13 @@ const Login = () => {
             )}
           </div>
 
-          <button type="submit" className="iron-btn w-full mt-4 py-4">
-            Authorize Access
+          <button
+            type="submit"
+            className="iron-btn w-full mt-4 py-4 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+            disabled={isLoading}
+          >
+            {isLoading && <Loader2 className="w-5 h-5 animate-spin" />}
+            {isLoading ? 'Authorizing...' : 'Authorize Access'}
           </button>
         </form>
 

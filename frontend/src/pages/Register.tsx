@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { z } from 'zod';
 import { registerSchema } from '../utils/validators';
 import { useAuthStore } from '../store/useAuthStore';
+import { api } from '../utils/api';
+import { Loader2 } from 'lucide-react';
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -15,18 +17,22 @@ const Register = () => {
   const [passwordStrengthError, setPasswordStrengthError] = useState('');
 
   const login = useAuthStore((state) => state.login);
+  const isLoading = useAuthStore((state) => state.isLoading);
+  const setLoading = useAuthStore((state) => state.setLoading);
   const navigate = useNavigate();
 
-  const handleRegister = (e: React.FormEvent) => {
+  const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrors({});
+    setLoading(true);
 
     try {
       registerSchema.parse(formData);
 
-      // If valid, simulate registration and login
-      login({ id: '2', name: formData.name, email: formData.email });
-      navigate('/');
+      // Call API registration
+      const response = await api.auth.register(formData);
+      login(response.user, response.access_token);
+      navigate('/home');
     } catch (error) {
       if (error instanceof z.ZodError) {
         const fieldErrors: Record<string, string> = {};
@@ -36,7 +42,11 @@ const Register = () => {
           }
         });
         setErrors(fieldErrors);
+      } else if (error instanceof Error) {
+        setErrors({ email: error.message });
       }
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -239,8 +249,13 @@ const Register = () => {
             )}
           </div>
 
-          <button type="submit" className="iron-btn w-full mt-4 py-4">
-            Create Account
+          <button
+            type="submit"
+            className="iron-btn w-full mt-4 py-4 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+            disabled={isLoading}
+          >
+            {isLoading && <Loader2 className="w-5 h-5 animate-spin" />}
+            {isLoading ? 'Initializing...' : 'Create Account'}
           </button>
         </form>
 
